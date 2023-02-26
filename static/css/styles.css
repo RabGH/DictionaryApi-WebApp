@@ -1,0 +1,349 @@
+:root {
+    --color-secondary: #f7f7f7; /* off white */
+    --color-light-gray: #bfbfbf;
+    --color-primary: #333333; /* dark gray */
+    --color-electric-blue: #00FFFF;
+    --color-accent: #fc5185; /* bright pink */
+    --color-hover: #FF7F50; /* bright orange */
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== Font Styles ========== */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Medium.ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto-Light.ttf');
+    font-weight: light;
+    font-style: normal;
+}
+
+/* ========== General Styles ========== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    line-height: 1.7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem;
+    height: calc(100vh);
+    width: 100%;
+}
+
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+    color: var(--color-accent);
+}
+
+.url-links {
+    color: var(--color-accent);
+    padding: 0.5rem;
+}
+
+.url-links:hover {
+    color: var(--color-hover);
+}
+
+.pos {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+}
+
+/* ========== Header Styles ========== */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background-color: var(--color-white);
+    border-bottom: 1.2px solid var(--color-accent);
+}
+
+.logo-container img {
+    max-width: 100%;
+}
+
+/* ========== Footer Styles ========== */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background-color: var(--color-white);
+    border-top: 1.2px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 1rem;
+}
+
+/* ========== Form Styles ========== */
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.7rem;
+}
+
+form input[type="text"] {
+    flex: 1;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
+}
+
+form button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3rem;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+}
+
+.text-contact, form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--color-electric-blue);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+form textarea {
+    height: 10rem;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.1rem;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 3rem;
+}
+
+.form-group textarea {
+    height: 10rem;
+    resize: vertical;
+    background-color: var(--color-light-gray);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-actions input[type="submit"],
+.form-actions input[type="reset"] {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    cursor: pointer;
+}
+
+
+form input[type="submit"]:hover {
+    background-color: var(--color-hover);
+}
+
+form input[type="reset"]:hover {
+    background-color: var(--color-light-gray);
+}
+
+/* ========== Input Styles ========== */
+
+.input {
+
+}
+
+.btn {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    color: var(--color-primary);
+}
+
+.btn-contact {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3rem;
+    margin-left: auto;
+}
+
+/* ========== Output Styles ========== */
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.word {
+    color: var(--color-accent);
+}
+
+.results-container {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--color-electric-blue);
+}
+
+.result-container ul {
+    margin-bottom: 1rem;
+}
+
+.result-container li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.strong {
+    color: var(--color-accent);
+}
+
+/* ========== Error Styles ========== */
+
+.error-btn {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3rem;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.error-container {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.error-words {
+    padding-top: 10rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem;
+    height: calc(100vh - 35.5rem);
+    width: 100%;
+}
