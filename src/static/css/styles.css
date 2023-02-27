@@ -28,14 +28,14 @@ html {
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/static/fonts/Roboto-Medium.ttf');
+    src: url('../fonts/Roboto-Medium.ttf');
     font-weight: medium;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/static/fonts/Roboto-Light.ttf');
+    src: url('../fonts/Roboto-Light.ttf');
     font-weight: light;
     font-style: normal;
 }

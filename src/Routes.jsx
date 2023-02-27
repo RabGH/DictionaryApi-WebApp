@@ -1,27 +1,18 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Dictionary from './pages/Output';
+import Dictionary from './pages/Dictionary';
 import Error from './pages/Error';
 
-function Routes() {
+export default function AppRoutes() { // change the export to default
     return (
-        <Switch>
-            <Route exact path='/'>
-                <Home />
-            </Route>
-            <Route exact path='/Contact'>
-                <Contact />
-            </Route>
-            <Route exact path='/Dictionary'>
-                <Dictionary />
-            </Route>
-            <Route exact path='/Error'>
-                <Error />
-            </Route>
-        </Switch>
+        <Routes>
+            <Route path='' element={<Home/>} />
+            <Route path='/Contact' element={<Contact/>} />
+            <Route path='/Dictionary' element={<Dictionary/>} />
+            <Route path='*' element={<Error/>} />
+        </Routes>
     );
 }
 
-export default Routes;

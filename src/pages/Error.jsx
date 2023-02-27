@@ -1,6 +1,6 @@
 import React from 'react';
-import './static/css/styles.css';
-import Header from '/src/components/Header.jsx'
+import '../static/css/styles.css';
+import Header from '../components/Header'
 
 function Error() {
   return (

@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './Routes';
+import './static/css/styles.css';
 import Header from './components/Header';
-import Routes from './Routes';
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <Header />
-            <Routes />
-        </Router>
+            <AppRoutes />
+        </BrowserRouter>
     );
 }
 
