@@ -1,6 +1,6 @@
 import React from 'react';
 import '../static/css/styles.css';
-import DictionaryApi from '../components/DictionaryApi.jsx';
+import DictionaryApi from './DictionaryApi.jsx';
 import Header from '../components/Header';
 
 

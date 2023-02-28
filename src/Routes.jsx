@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Dictionary from './pages/Dictionary';
+import Dictionary from './pages/DictionaryApi';
 import Error from './pages/Error';
 
 export default function AppRoutes() { // change the export to default
