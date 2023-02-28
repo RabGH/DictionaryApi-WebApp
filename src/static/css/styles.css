@@ -118,7 +118,7 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.7rem;
+    margin-top: 1rem;
 }
 
 form input[type="text"] {
@@ -130,13 +130,12 @@ form input[type="text"] {
     font-size: 1rem;
     background-color: var(--color-light-gray);
     color: var(--color-primary);
-    width: 93%;
+    width: 86%;
 }
 
 form button[type="submit"] {
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-
 }
 
 .form-contact {
@@ -289,6 +288,7 @@ form input[type="reset"]:hover {
     margin: auto;
     width: 80%;
     text-align: center;
+    margin-top: 2rem;
 }
 
 h2 {
@@ -321,14 +321,32 @@ h2 {
     justify-content: center;
     margin: 0 1rem;
     cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .error-container {
-    padding: 0;
+    padding: 2rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.error-message {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.error-description {
+    margin-bottom: 2rem;
+}
+
+.error-btn-container {
+    display: flex;
+    justify-content: center;
 }
 
 .error-words {
@@ -344,4 +362,20 @@ h2 {
     padding: 8rem;
     height: calc(100vh - 35.5rem);
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    /* styles for screens with a maximum width of 768px */
+    .container {
+        padding: 4rem;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    form button[type="submit"] {
+        margin-left: 0;
+    }
 }
