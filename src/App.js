@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './Routes';
+import MUI from './components/ThemeProvider';
 import './static/css/styles.css';
 import Header from './components/Header';
 
 function App() {
     return (
-        <BrowserRouter>
+      <BrowserRouter>
+          <MUI>
             <Header />
             <AppRoutes />
-        </BrowserRouter>
+          </MUI>
+       </BrowserRouter>
     );
 }
 
