@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/SearchButton'
 import SearchTextField from '../components/TextField';
-import '../static/css/styles.css';
 import '../static/css/dictionaryapi.css';
 import '../static/css/mui.css';
 
@@ -12,18 +11,13 @@ function DictionaryApi() {
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setIsButtonLoading(true);
-    fetchData(word);
-  };
-
   const handleWordChange = (e) => {
     setWord(e.target.value);
   };
 
   const fetchData = (word) => {
     setIsLoading(true);
+    setIsButtonLoading(true);
     fetch(`http://localhost:5000/api/info?word=${word}`, {
         credentials: 'include'
     })
@@ -46,10 +40,12 @@ function DictionaryApi() {
   };
 
   return (
-    <form className="form" onSubmit={handleSearch}>
-      <SearchTextField word={word} handleWordChange={handleWordChange} handleSearch={handleSearch} />
-        <SearchButton isLoading={isLoading} isButtonLoading={isButtonLoading} />
-         {!isLoading && wordData && (
+    <div>
+      <form className="form" onSubmit={(e) => e.preventDefault()}>
+        <SearchTextField word={word} handleWordChange={handleWordChange} />
+        <SearchButton handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+      </form>
+      {!isLoading && wordData && (
         <div className="results-container fade-in">
           <h1>
             <span className="word">{wordData.word}</span>
@@ -70,7 +66,7 @@ function DictionaryApi() {
           )}
         </div>
       )}
-    </form>
+    </div>
   );
 }
 
