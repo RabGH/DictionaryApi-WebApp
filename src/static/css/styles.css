@@ -197,16 +197,4 @@ h2 {
 
 @media screen and (max-width: 768px) {
     /* styles for screens with a maximum width of 768px */
-    .container {
-        padding: 4rem;
-    }
-
-    form input[type="text"] {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    form button[type="submit"] {
-        margin-left: 0;
-    }
 }

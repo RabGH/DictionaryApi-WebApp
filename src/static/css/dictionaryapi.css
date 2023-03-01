@@ -20,10 +20,10 @@ form {
     width: 86%;
 } */
 
-form button[type="submit"] {
+/* form button[type="submit"] {
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
-}
+} */
 
 .form-contact {
     display: flex;
@@ -52,14 +52,3 @@ form label {
     background-color: var(--color-secondary);
 }
 
-form textarea {
-    height: 10rem;
-}
-
-form input[type="submit"]:hover {
-    background-color: var(--color-hover);
-}
-
-form input[type="reset"]:hover {
-    background-color: var(--color-light-gray);
-}

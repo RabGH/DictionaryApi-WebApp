@@ -1,33 +1,20 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 
-const useStyles = makeStyles((theme) ({
-  root: {
-    '& .MuiTextField-root': {
-        margin: theme.spacing(1),
-        width: '100%',
-       },
-    },
-}));
 
-function CustomizeInputs(props) {
-    const classes = useStyles();
-
+function MUITextField(props) {
     return (
-        <form className={classes.root} noValidate autoComplete='off'>
-            <div>
-                <TextField
+        <div>
+            <TextField
                 id={props.id}
                 label={props.label}
                 name={props.name}
                 type={props.type}
                 variant="outlined"
                 required={props.required}
-                />
-            </div>
-        </form>
+            />
+        </div>
     )
 }
 
-export default CustomizeInputs;
+export default MUITextField;

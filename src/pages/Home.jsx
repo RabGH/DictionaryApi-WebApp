@@ -1,6 +1,7 @@
 import React from 'react';
 import '../static/css/styles.css';
 import DictionaryApi from './DictionaryApi.jsx';
+import MUIButton from '../components/MUIButton'
 
 
 function Home() {
@@ -16,9 +17,9 @@ function Home() {
      <footer className="footer">
         <p>
           Dictionary API &copy; 2023{' '}
-          <button className="btn btn-contact" onClick={() => (window.location.href = '/contact/')}>
+          <MUIButton className="btn btn-contact" onClick={() => (window.location.href = '/contact')}>
             Contact
-          </button>
+          </MUIButton>
         </p>
       </footer>
     </>

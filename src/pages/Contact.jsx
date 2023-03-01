@@ -1,7 +1,7 @@
 import React from 'react';
 import '../static/css/contact.css';
-import { TextField } from '@mui/material';
-import SearchButton from '../components/SearchButton'
+import MUITextField from '../components/TextField';
+import MUIButton from '../components/MUIButton'
 
 
 function Contact() {
@@ -43,24 +43,24 @@ function Contact() {
           </p>
           <form className="form-contact" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name:</label>
-              <input className="text-contact" type="text" id="name" name="name" required />
+            <MUITextField id="name" label="Name" name="name" type="text" variant="outlined" required />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input className="text-contact" type="text" id="email" name="email" required />
+              <MUITextField id="email" label="Email" name="email" type="email" variant="outlined" required />
             </div>
             <div className="form-group">
-              <label htmlFor="subject">Subject:</label>
-              <input className="text-contact" type="text" id="subject" name="subject" required />
+              <MUITextField id="subject" label="Subject" name="subject" type="text" variant="outlined" required />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" required></textarea>
+              <MUITextField id="message" label="Message" name="message" multiline rows={5} variant="outlined" required />
             </div>
             <div className="form-actions">
-              <input className="input-contact" type="submit" value="Send" />
-              <input className="input-contact" type="reset" value="Clear" />
+              <MUIButton type="submit" onClick={handleSubmit}>
+                Send
+              </MUIButton>
+              <MUIButton type="reset">
+                Clear
+              </MUIButton>
             </div>
           </form>
         </div>
@@ -68,9 +68,9 @@ function Contact() {
       <footer className="footer">
         <p>
           Dictionary API &copy; 2023{' '}
-          <button className="btn btn-contact" onClick={() => (window.location.href = '/')}>
+          <MUIButton className="btn btn-contact" onClick={() => (window.location.href = '/')}>
             Home
-          </button>
+          </MUIButton>
         </p>
       </footer>
     </>

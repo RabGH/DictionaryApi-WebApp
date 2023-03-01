@@ -1,6 +1,6 @@
 /* ========== Form Styles ========== */
 
-.form-group {
+/* .form-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -57,4 +57,16 @@
     color: var(--color-white);
     background-color: var(--color-accent);
     cursor: pointer;
+} */
+
+/* form textarea {
+    height: 10rem;
 }
+
+form input[type="submit"]:hover {
+    background-color: var(--color-hover);
+}
+
+form input[type="reset"]:hover {
+    background-color: var(--color-light-gray);
+} */
