@@ -1,72 +1,46 @@
 /* ========== Form Styles ========== */
 
-/* .form-group {
+.container-contact {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 1.7rem;
     align-items: center;
-    margin-bottom: 1.5rem;
+
+}
+
+.container-contact-form {
+    flex-direction: column;
+    padding: 0rem;
+    height: calc(100vh);
     width: 100%;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.1rem;
-    font-size: 1.1rem;
-    color: var(--color-accent);
+.form-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
     width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
 }
 
-.form-group input[type="text"],
-.form-group textarea {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid var(--color-accent);
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    background-color: var(--color-light-gray);
-    color: var(--color-primary);
-    margin-right: 0.5rem;
-}
-
-.form-group:last-of-type {
-    margin-bottom: 3rem;
-}
-
-.form-group textarea {
-    height: 10rem;
-    resize: vertical;
-    background-color: var(--color-light-gray);
+.contact-field-pos {
+    width: 100%;
 }
 
 .form-actions {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin-top: 20px;
 }
 
-.form-actions input[type="submit"],
-.form-actions input[type="reset"] {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--color-light-gray);
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    color: var(--color-white);
-    background-color: var(--color-accent);
-    cursor: pointer;
-} */
-
-/* form textarea {
-    height: 10rem;
+.send-btn  {
+    margin-right: 100px;
 }
 
-form input[type="submit"]:hover {
-    background-color: var(--color-hover);
+.clear-btn {
+    margin-left: 100px;
 }
-
-form input[type="reset"]:hover {
-    background-color: var(--color-light-gray);
-} */

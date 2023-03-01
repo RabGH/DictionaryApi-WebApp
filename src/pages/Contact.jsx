@@ -36,29 +36,31 @@ function Contact() {
   return (
     <>
       <main>
-        <div className="container">
+        <div className="container-contact">
           <h1>Contact Me</h1>
           <p>
             Contact Page, type in your name, email, subject, and message
           </p>
+        </div>
+        <div className="container-contact-form">
           <form className="form-contact" onSubmit={handleSubmit}>
             <div className="form-group">
-            <MUITextField id="name" label="Name" name="name" type="text" variant="outlined" required />
+              <MUITextField className="name-contact-field-pos" id="name" label="Name" name="name" type="text" variant="outlined" required />
             </div>
             <div className="form-group">
-              <MUITextField id="email" label="Email" name="email" type="email" variant="outlined" required />
+              <MUITextField className="email-contact-field-pos" id="email" label="Email" name="email" type="email" variant="outlined" required />
             </div>
             <div className="form-group">
-              <MUITextField id="subject" label="Subject" name="subject" type="text" variant="outlined" required />
+              <MUITextField className="subject-contact-field-pos" id="subject" label="Subject" name="subject" type="text" variant="outlined" required />
             </div>
             <div className="form-group">
-              <MUITextField id="message" label="Message" name="message" multiline rows={5} variant="outlined" required />
+              <MUITextField className="message-contact-field-pos" id="message" label="Message" name="message" multiline rows={5} variant="outlined" required />
             </div>
             <div className="form-actions">
-              <MUIButton type="submit" onClick={handleSubmit}>
+              <MUIButton className="send-btn" spacing={2} type="submit" onClick={handleSubmit} style={{ marginRight: '10px' }}>
                 Send
               </MUIButton>
-              <MUIButton type="reset">
+              <MUIButton className="clear-btn" spacing={2} type="reset" style={{ marginLeft: '10px' }}>
                 Clear
               </MUIButton>
             </div>

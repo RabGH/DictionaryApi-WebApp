@@ -3,6 +3,8 @@ import TextField from '@mui/material/TextField';
 
 
 function MUITextField(props) {
+    const { multiline } = props;
+
     return (
         <div>
             <TextField
@@ -10,8 +12,11 @@ function MUITextField(props) {
                 label={props.label}
                 name={props.name}
                 type={props.type}
-                variant="outlined"
+                variant="filled"
                 required={props.required}
+                multiline={multiline}
+                rows={props.rows}
+                style={multiline ? { width: '100%', margin:'0 auto' } : { width: '100%' }}
             />
         </div>
     )

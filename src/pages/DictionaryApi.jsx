@@ -41,27 +41,33 @@ function DictionaryApi() {
 
   return (
     <div>
-      <form className="form" onSubmit={(e) => e.preventDefault()}>
-        <SearchTextField word={word} handleWordChange={handleWordChange} />
-        <SearchButton handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+      <form className="form-main" onSubmit={(e) => e.preventDefault()}>
+        <SearchTextField className="search-text-field-pos" word={word} handleWordChange={handleWordChange} />
+        <SearchButton className="search-btn-pos" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
       </form>
       {!isLoading && wordData && (
         <div className="results-container fade-in">
           <h1>
-            <span className="word">{wordData.word}</span>
+            <span className="results-word">
+              {wordData.word}
+            </span>
           </h1>
-          <span className="pos">{wordData.part_of_speech}</span>
+          <span className="results-speech">
+            {wordData.part_of_speech}
+          </span>
           <ol>
               {wordData.definitions.map((definition, index) => (
-                <li key={index}>
-                  <span style={{ color: '#fc5185' }}>{index + 1}. </span>
+                <li className="list-main" key={index}>
+                  <span className='span-main'>{index + 1}. </span>
                   {definition.charAt(0).toUpperCase() + definition.slice(1)}
                 </li>
               ))}
           </ol>
           {wordData.synonyms && (
             <p>
-              <strong className="strong">Synonyms:</strong> {wordData.synonyms.join(', ')}
+              <strong className="results-strong">
+                Synonyms:
+              </strong> {wordData.synonyms.join(', ')}
             </p>
           )}
         </div>

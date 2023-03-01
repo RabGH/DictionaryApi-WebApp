@@ -11,13 +11,13 @@ function Home() {
         <div className="container">
           <h1>Dictionary API</h1>
           <p>This is an API that takes a word as a key and returns its definition as a value</p>
-          <DictionaryApi />
+          <DictionaryApi className="total-output-pos" />
         </div>
       </main>
      <footer className="footer">
         <p>
           Dictionary API &copy; 2023{' '}
-          <MUIButton className="btn btn-contact" onClick={() => (window.location.href = '/contact')}>
+          <MUIButton className="btn-contact-pos" onClick={() => (window.location.href = '/contact')}>
             Contact
           </MUIButton>
         </p>

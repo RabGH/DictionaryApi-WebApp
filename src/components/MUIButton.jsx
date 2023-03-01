@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-function MUIButton({ onClick, children }) {
+function MUIButton({ onClick, children, className, spacing }) {
     return (
-        <Button variant="contained" color="secondary" onClick={onClick}>
+        <Button className={className} spacing={spacing} variant="contained" color="secondary" onClick={onClick}>
             { children }
         </Button>
     );
