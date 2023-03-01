@@ -3,7 +3,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import CircularProgress from '@mui/material/CircularProgress';
 import '../static/css/mui.css';
 
-function SearchButton ({ isLoading, isButtonLoading, handleClick }) {
+function SearchButton ({ isLoading, handleClick }) {
     return (
         <LoadingButton
             id='search-btn'
@@ -12,10 +12,10 @@ function SearchButton ({ isLoading, isButtonLoading, handleClick }) {
             loading={isLoading}
             loadingIndicator={<CircularProgress className="circular-progress-bar" />}
             onClick={handleClick}
-            disabled={isButtonLoading || isLoading}
+            disabled={isLoading}
 
         >
-            {isButtonLoading ? '' : 'Search'}
+            {isLoading ? 'Loading...' : 'Search'}
         </LoadingButton>
     );
 }

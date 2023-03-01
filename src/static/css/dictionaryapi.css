@@ -8,7 +8,7 @@ form {
     margin-top: 1rem;
 }
 
-form input[type="text"] {
+/* form input[type="text"] {
     display: block;
     margin-right: 0.5rem;
     padding: 0.5rem;
@@ -18,7 +18,7 @@ form input[type="text"] {
     background-color: var(--color-light-gray);
     color: var(--color-primary);
     width: 86%;
-}
+} */
 
 form button[type="submit"] {
     padding: 0.5rem 1rem;
