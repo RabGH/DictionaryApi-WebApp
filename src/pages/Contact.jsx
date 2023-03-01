@@ -1,6 +1,7 @@
 import React from 'react';
 import '../static/css/contact.css';
 import { TextField } from '@mui/material';
+import SearchButton from '../components/SearchButton'
 
 
 function Contact() {
