@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import LoadingButton from '@mui/lab/LoadingButton';
-import CircularProgress from '@mui/material/CircularProgress';
+import SearchButton from '../components/SearchButton'
+import SearchTextField from '../components/TextField';
 import '../static/css/styles.css';
+import '../static/css/dictionaryapi.css';
+import '../static/css/mui.css';
 
 
 function DictionaryApi() {
@@ -45,23 +47,9 @@ function DictionaryApi() {
 
   return (
     <form className="form" onSubmit={handleSearch}>
-      <input className="input" type="text" value={word} onChange={handleWordChange} placeholder="Enter a word" required />
-      <LoadingButton
-        id="search-btn"
-        type="submit"
-        className="btn loading-btn"
-        loading={isLoading}
-        loadingIndicator={<CircularProgress style={{ color: '#fc5185' }} />}
-        style={{
-        backgroundColor: '#333333',
-        borderColor: '#fc5185',
-        color: isButtonLoading ? 'transparent' : '#fc5185',
-        border: isButtonLoading ? 'none' : '1px solid #fc5185',
-        }}
-      >
-        {isButtonLoading ? "" : "Search"}
-      </LoadingButton>
-      {!isLoading && wordData && (
+      <SearchTextField word={word} handleWordChange={handleWordChange} handleSearch={handleSearch} />
+        <SearchButton isLoading={isLoading} isButtonLoading={isButtonLoading} />
+         {!isLoading && wordData && (
         <div className="results-container fade-in">
           <h1>
             <span className="word">{wordData.word}</span>

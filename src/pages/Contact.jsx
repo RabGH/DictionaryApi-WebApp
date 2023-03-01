@@ -1,6 +1,6 @@
 import React from 'react';
 import '../static/css/styles.css';
-import Header from '../components/Header'
+import '../static/css/contact.css';
 
 function Contact() {
   const handleSubmit = async (event) => {
@@ -33,7 +33,6 @@ function Contact() {
 
   return (
     <>
-      <Header />
       <main>
         <div className="container">
           <h1>Contact Me</h1>

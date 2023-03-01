@@ -1,11 +1,10 @@
 import React from 'react';
 import '../static/css/styles.css';
-import Header from '../components/Header'
+import '../static/css/error.css';
 
 function Error() {
   return (
   <>
-    <Header />
       <main>
         <div className="error-container">
           <h1 className="error-message">Error</h1>

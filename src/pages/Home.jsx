@@ -1,13 +1,12 @@
 import React from 'react';
 import '../static/css/styles.css';
+import '../static/css/home.css';
 import DictionaryApi from './DictionaryApi.jsx';
-import Header from '../components/Header';
 
 
 function Home() {
   return (
     <>
-      <Header />
       <main>
         <div className="container">
           <h1>Dictionary API</h1>

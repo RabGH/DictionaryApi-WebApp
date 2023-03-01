@@ -1,14 +1,18 @@
 import React from 'react';
 import '../static/css/styles.css';
-import logo from '../static/images/logo.png'; // import the image
+import logo from '../static/images/logo.png';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 function Header() {
   return (
-    <header className="header">
-      <div className="logo-container">
-        <img className="logo" src={logo} alt="" /> {/* use the imported image */}
-      </div>
-    </header>
+    <AppBar position="static">
+      <Toolbar>
+          <img className="logo" src={logo} alt="" />
+          <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+            
+          </Typography>
+      </Toolbar>
+    </AppBar>
   )
 }
 
