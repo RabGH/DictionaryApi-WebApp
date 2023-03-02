@@ -1,7 +1,7 @@
 import React from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
 import CircularProgress from '@mui/material/CircularProgress';
-import '../static/css/mui.css';
+
 
 function SearchButton ({ isLoading, handleClick }) {
     return (
@@ -13,6 +13,14 @@ function SearchButton ({ isLoading, handleClick }) {
             loadingIndicator={<CircularProgress className="circular-progress-bar" />}
             onClick={handleClick}
             disabled={isLoading}
+            color='secondary'
+            variant='contained'
+            sx={{ 
+                marginLeft: '1rem',
+                height: '3rem',
+                width: '6rem',
+                marginTop: '1rem',
+             }}
 
         >
             {isLoading ? 'Loading...' : 'Search'}

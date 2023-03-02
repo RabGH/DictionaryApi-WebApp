@@ -7,7 +7,7 @@ import MUIButton from '../components/MUIButton'
 function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const form = event.target;
+    const form = document.querySelector('form#ContactForm');
     const formData = new FormData(form);
     const data = {};
     for (let entry of formData.entries()) {
@@ -43,7 +43,7 @@ function Contact() {
           </p>
         </div>
         <div className="container-contact-form">
-          <form className="form-contact" onSubmit={handleSubmit}>
+          <form id="ContactForm" className="form-contact" onSubmit={handleSubmit}>
             <div className="form-group">
               <MUITextField className="name-contact-field-pos" id="name" label="Name" name="name" type="text" variant="outlined" required />
             </div>
@@ -57,10 +57,10 @@ function Contact() {
               <MUITextField className="message-contact-field-pos" id="message" label="Message" name="message" multiline rows={5} variant="outlined" required />
             </div>
             <div className="form-actions">
-              <MUIButton className="send-btn" spacing={2} type="submit" onClick={handleSubmit} style={{ marginRight: '10px' }}>
+              <MUIButton className="send-btn" type="submit">
                 Send
               </MUIButton>
-              <MUIButton className="clear-btn" spacing={2} type="reset" style={{ marginLeft: '10px' }}>
+              <MUIButton className="clear-btn" type="reset">
                 Clear
               </MUIButton>
             </div>
@@ -68,12 +68,10 @@ function Contact() {
         </div>
       </main>
       <footer className="footer">
-        <p>
           Dictionary API &copy; 2023{' '}
-          <MUIButton className="btn btn-contact" onClick={() => (window.location.href = '/')}>
+          <MUIButton className="btn-contact" onClick={() => (window.location.href = '/')}>
             Home
           </MUIButton>
-        </p>
       </footer>
     </>
   );

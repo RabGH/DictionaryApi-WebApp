@@ -13,6 +13,21 @@ const theme = createTheme({
             default: '#333333',
             paper: '#FAFAFA'
         },
+        text: {
+            primary: "#FFFFFF",
+            secondary: "#FFFFFF",
+        },
+    },
+    typography: {
+        h6: {
+            color: "#fc5185",
+        },
+        body1: {
+            color: "#FFFFFF",
+        },
+        body2: {
+            color: "#FFFFFF",
+        },
     },
 });
 

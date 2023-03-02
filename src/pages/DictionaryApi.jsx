@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchButton from '../components/SearchButton'
 import SearchTextField from '../components/SearchTextField';
 import '../static/css/dictionaryapi.css';
-import '../static/css/mui.css';
+import '../static/css/home.css';
 
 
 function DictionaryApi() {
@@ -43,7 +43,7 @@ function DictionaryApi() {
     <div>
       <form className="form-main" onSubmit={(e) => e.preventDefault()}>
         <SearchTextField className="search-text-field-pos" word={word} handleWordChange={handleWordChange} />
-        <SearchButton className="search-btn-pos" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+        <SearchButton className="loading-btn" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
       </form>
       {!isLoading && wordData && (
         <div className="results-container fade-in">
@@ -53,7 +53,7 @@ function DictionaryApi() {
             </span>
           </h1>
           <span className="results-speech">
-            {wordData.part_of_speech}
+            ({wordData.part_of_speech})
           </span>
           <ol>
               {wordData.definitions.map((definition, index) => (

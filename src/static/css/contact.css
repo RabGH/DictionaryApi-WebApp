@@ -37,10 +37,7 @@
     margin-top: 20px;
 }
 
-.send-btn  {
-    margin-right: 100px;
-}
+.form-actions > button:first-child {
+    margin-right: 30px;
+  }
 
-.clear-btn {
-    margin-left: 100px;
-}

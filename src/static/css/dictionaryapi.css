@@ -1,2 +1,56 @@
 /* ========== Form Styles ========== */
 
+.form-main {
+    display: block;
+}
+
+.results-container {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.result-container ul {
+    margin-bottom: 1rem;
+}
+
+.result-container li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.results-word {
+    color: var(--color-accent);
+}
+
+.results-speech {
+    color: var(--color-accent);
+}
+
+.span-main {
+    color: var(--color-accent);
+}
+
+.results-strong {
+    color: var(--color-accent)
+}
+
+.loading-btn {
+    margin-left: 5rem;
+}

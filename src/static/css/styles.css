@@ -49,48 +49,23 @@ body {
     line-height: 1.7;
 }
 
-.container {
-    display: block;
-    flex-direction: column;
-    padding: 5rem;
-    height: calc(100vh);
-    width: 100%;
-}
-
-
 h1, h2, h3, h4 {
     font-weight: 400;
     color: var(--color-accent);
 }
 
-.url-links {
-    color: var(--color-accent);
-    padding: 0.5rem;
-}
-
-.url-links:hover {
-    color: var(--color-hover);
-}
-
 
 /* ========== Header Styles ========== */
 
-.header {
+.toolbar {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6rem;
-    background-color: var(--color-white);
-    border-bottom: 1.2px solid var(--color-accent);
-}
-
-.logo-container img {
-    max-width: 100%;
-}
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
 
 /* ========== Footer Styles ========== */
 
@@ -107,15 +82,6 @@ h1, h2, h3, h4 {
     border-top: 1.2px solid var(--color-accent);
     color: var(--color-accent);
     padding: 1rem;
-}
-
-.home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 8rem;
-    height: calc(100vh - 35.5rem);
-    width: 100%;
 }
 
 /* ---------- Form Styles ---------- */

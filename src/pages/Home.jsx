@@ -1,28 +1,31 @@
 import React from 'react';
 import '../static/css/styles.css';
+import '../static/css/home.css';
+import '../static/css/dictionaryapi.css';
 import DictionaryApi from './DictionaryApi.jsx';
 import MUIButton from '../components/MUIButton'
+import { Typography } from '@mui/material';
 
 
 function Home() {
   return (
-    <>
-      <main>
-        <div className="container">
+  <>
+    <div className='home-container'>
+      <Typography variant='h6' component='h4' align='center'>
           <h1>Dictionary API</h1>
           <p>This is an API that takes a word as a key and returns its definition as a value</p>
-          <DictionaryApi className="total-output-pos" />
+      </Typography>
+        <div className='search-container'>
+          <DictionaryApi className="search-text-field-pos" />
         </div>
-      </main>
      <footer className="footer">
-        <p>
           Dictionary API &copy; 2023{' '}
-          <MUIButton className="btn-contact-pos" onClick={() => (window.location.href = '/contact')}>
+          <MUIButton className="btn-contact" onClick={() => (window.location.href = '/contact')}>
             Contact
           </MUIButton>
-        </p>
       </footer>
-    </>
+    </div>
+  </>
   );
 }
 
