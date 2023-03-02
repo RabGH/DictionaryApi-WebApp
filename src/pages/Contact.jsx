@@ -39,7 +39,10 @@ function Contact() {
         <div className="container-contact">
           <h1>Contact Me</h1>
           <p>
-            Contact Page, type in your name, email, subject, and message
+            Contact Page, type in your name, email, subject, and message. 
+          </p>
+          <p>
+            I'll get back you to you as soon as I can!
           </p>
         </div>
         <div className="container-contact-form">

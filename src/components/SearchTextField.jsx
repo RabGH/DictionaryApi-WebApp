@@ -7,6 +7,7 @@ function SearchTextField(props) {
   return (
     <TextField
         sx={{
+            width: '1200px',
             '& label.Mui-focused': {
               color: '#fc5185',
             },

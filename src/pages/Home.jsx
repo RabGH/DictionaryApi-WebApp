@@ -11,10 +11,10 @@ function Home() {
   return (
   <>
     <div className='home-container'>
-      <Typography variant='h6' component='h4' align='center'>
+      <header className="home-header">
           <h1>Dictionary API</h1>
           <p>This is an API that takes a word as a key and returns its definition as a value</p>
-      </Typography>
+      </header>
         <div className='search-container'>
           <DictionaryApi className="search-text-field-pos" />
         </div>

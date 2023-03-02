@@ -1,14 +1,26 @@
 /* ========== Form Styles ========== */
 
 .form-main {
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-text-field-pos {
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 1rem;
 }
 
 .results-container {
-    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
-    text-align: center;
-    margin-top: 2rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
 }
 
 .result-container ul {

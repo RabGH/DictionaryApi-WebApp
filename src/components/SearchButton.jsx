@@ -19,7 +19,6 @@ function SearchButton ({ isLoading, handleClick }) {
                 marginLeft: '1rem',
                 height: '3rem',
                 width: '6rem',
-                marginTop: '1rem',
              }}
 
         >
