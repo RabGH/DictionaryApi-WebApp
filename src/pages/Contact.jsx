@@ -69,12 +69,6 @@ function Contact() {
           </form>
         </div>
       </main>
-      <footer className="footer">
-          Dictionary API &copy; 2023{' '}
-          <MUIButton className="btn-contact" onClick={() => (window.location.href = '/')}>
-            Home
-          </MUIButton>
-      </footer>
     </>
   );
 }

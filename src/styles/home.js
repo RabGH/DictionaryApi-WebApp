@@ -1,6 +1,4 @@
 /* ---------- Component Search Styles ---------- */
-import { typographyCopyRight } from './home';
-
 export const SearchFieldDesign = {
     width: '1200px',
     '& label.Mui-focused': {
@@ -29,11 +27,6 @@ export const SearchBtn = {
 }
 
 /* ---------- Header Styles ---------- */
-
-export const hAppBarStyles = {
-  
-}
-
 export const headerStyles = {
   display: 'flex',
   justifyContent: 'space-between',
@@ -62,3 +55,23 @@ export const typographyCopyRight = {
 export const typographyLove = {
   marginRight: '1rem',
 }
+
+/* ---------- Home Styles ---------- */
+
+export const boxHome1 = {
+  height: '100vh', 
+  display: 'flex', 
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+}
+
+
+export const boxHome2 = {
+  mt: 3,
+}
+
+export const typographyHome1 = {
+  mb: 2,
+}
+

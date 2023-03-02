@@ -1,27 +1,27 @@
 import React from 'react';
 import DictionaryApi from './DictionaryApi.jsx';
-import MUIButton from '../components/MUIButton'
-import { Typography } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
+import { boxHome1, boxHome2, typographyHome1 } from '../styles/home';
 
 
 function Home() {
   return (
   <>
-    <div className='home-container'>
-      <header className="home-header">
-          <h1>Dictionary API</h1>
-          <p>This is an API that takes a word as a key and returns its definition as a value</p>
-      </header>
-        <div className='search-container'>
-          <DictionaryApi className="search-text-field-pos" />
-        </div>
-     <footer className="footer">
-          Dictionary API &copy; 2023{' '}
-          <MUIButton className="btn-contact" onClick={() => (window.location.href = '/contact')}>
-            Contact
-          </MUIButton>
-      </footer>
-    </div>
+    <Container maxWidth="md">
+      <Box sx={{ boxHome1 }}>
+          <Typography variant='h3' component='div' sx={{ typographyHome1 }}>
+            Welcome to Dictionary
+          </Typography>
+
+          <Typography variant='body1' component='div'>
+            This is an API that takes a word as a key and return its definition as a value. 
+          </Typography>
+          
+          <Box sx={{ boxHome2 }}>
+            <DictionaryApi />
+          </Box>
+      </Box>
+    </Container>
   </>
   );
 }

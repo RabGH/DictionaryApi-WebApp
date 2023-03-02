@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/SearchButton'
 import SearchTextField from '../components/SearchTextField';
-
-
+import { Box, Container, Typography, Fade }from '@mui/material';
 
 function DictionaryApi() {
   const [word, setWord] = useState('');
@@ -39,44 +38,51 @@ function DictionaryApi() {
   };
 
   return (
-    <div>
-      <form className="form-main" onSubmit={(e) => e.preventDefault()}>
-        <div className='search-field-container'>
-          <SearchTextField className="search-text-field-pos" word={word} handleWordChange={handleWordChange} />
-        </div>
-        <div className='search-btn-container'>
-          <SearchButton className="loading-btn" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
-        </div>
-      </form>
+    <Box sx={{ mr:2 }}>
+      <Container maxWidth="md">
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <Typography variant="h4" sx={{ mr: 2 }}>
+
+          </Typography>
+          <Box sx={{ flexGrow: 1 }}>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <SearchTextField word={word} handleWordChange={handleWordChange} />
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+              <SearchButton handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+            </Box>
+          </form>
+        </Box>
+      </Box>
       {!isLoading && wordData && (
-        <div className="results-container fade-in">
-          <h1>
-            <span className="results-word">
-              {wordData.word}
-            </span>
-          </h1>
-          <span className="results-speech">
-            ({wordData.part_of_speech})
-          </span>
-          <ol>
-              {wordData.definitions.map((definition, index) => (
-                <li className="list-main" key={index}>
-                  <span className='span-main'>{index + 1}. </span>
-                  {definition.charAt(0).toUpperCase() + definition.slice(1)}
-                </li>
-              ))}
-          </ol>
-          {wordData.synonyms && (
-            <p>
-              <strong className="results-strong">
-                Synonyms:
-              </strong> {wordData.synonyms.join(', ')}
-            </p>
+        <Fade in={true}>
+          <Box sx={{ mt:2 }}>
+            <Typography variant='h5' sx={{ mb:1 }}>
+            <span>{wordData.word}</span>
+            <span sx={{ ml: 1, fontStyle: 'italic' }}>({wordData.part_of_speech})</span>
+        </Typography>
+        <ol>
+          {wordData.definitions.map((definition, index) => (
+            <li key={index}>
+              <Typography variant='body1' sx={{ display: 'flex', alignItems: 'center', mb:1 }}>
+                <span sx={{ fontWeight: 'bold', mr: 1 }}>{index + 1}. </span>
+                <span>{definition.charAt(0).toUpperCase() + definition.slice(1)}</span>
+              </Typography>
+            </li>
+          ))}
+        </ol>
+        {wordData.synonyms && (
+          <Typography variant='body1' sx={{ fontStyle: 'italic' }}>
+            <span sx={{ fontWeight: 'bold' }}>Synonyms: </span> 
+            {wordData.synonyms.join(', ')}
+          </Typography>
           )}
-        </div>
-      )}
-    </div>
+          </Box>
+        </Fade>
+        )}
+      </Container>
+    </Box>
   );
-}
+};
 
 export default DictionaryApi;
+
