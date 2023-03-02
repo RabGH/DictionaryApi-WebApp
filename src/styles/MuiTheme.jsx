@@ -19,14 +19,14 @@ const theme = createTheme({
         },
     },
     typography: {
-        h6: {
+        h4: {
             color: "#fc5185",
         },
         body1: {
             color: "#FFFFFF",
         },
         body2: {
-            color: "#FFFFFF",
+            color: "#000000",
         },
     },
 });

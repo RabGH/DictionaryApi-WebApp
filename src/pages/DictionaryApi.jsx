@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import SearchButton from '../components/SearchButton'
 import SearchTextField from '../components/SearchTextField';
 import { Box, Container, Typography, Fade }from '@mui/material';
+// import { dictBox1, dictBox2, dictBox3, dictBox4, dictBox5 } from './../styles/home';
+// import { dictSpan1, dictSpan2, dictSpan3 } from './../styles/home';
+// import { typographyDict1, typographyDict2, typographyDict3 } from './../styles/home';
 
 function DictionaryApi() {
   const [word, setWord] = useState('');
@@ -40,14 +43,20 @@ function DictionaryApi() {
   return (
     <Box sx={{ mr:2 }}>
       <Container maxWidth="md">
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <Box sx={{ display: 'flex',
+                   alignItems: 'center',
+                   justifyContent: 'center', 
+                   }}>
           <Typography variant="h4" sx={{ mr: 2 }}>
 
           </Typography>
           <Box sx={{ flexGrow: 1 }}>
             <form onSubmit={(e) => e.preventDefault()}>
               <SearchTextField word={word} handleWordChange={handleWordChange} />
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+            <Box sx={{ display: 'flex',
+                       justifyContent: 'center',
+                       mt: 2, 
+                       }}>
               <SearchButton handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
             </Box>
           </form>
@@ -58,13 +67,24 @@ function DictionaryApi() {
           <Box sx={{ mt:2 }}>
             <Typography variant='h5' sx={{ mb:1 }}>
             <span>{wordData.word}</span>
-            <span sx={{ ml: 1, fontStyle: 'italic' }}>({wordData.part_of_speech})</span>
+            <span sx={{ ml: 1,
+                        fontStyle: 'italic', 
+                        }}>
+                        ({wordData.part_of_speech})
+            </span>
         </Typography>
         <ol>
           {wordData.definitions.map((definition, index) => (
             <li key={index}>
-              <Typography variant='body1' sx={{ display: 'flex', alignItems: 'center', mb:1 }}>
-                <span sx={{ fontWeight: 'bold', mr: 1 }}>{index + 1}. </span>
+              <Typography variant='body1' sx={{ display: 'flex',
+                                                alignItems: 'center',
+                                                mb: 1, 
+                                                }}>
+                <span sx={{ fontWeight: 'bold',
+                            mr: 1, 
+                            }}>
+                            {index + 1}. 
+                            </span>
                 <span>{definition.charAt(0).toUpperCase() + definition.slice(1)}</span>
               </Typography>
             </li>
