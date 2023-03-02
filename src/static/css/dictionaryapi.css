@@ -1,26 +1,18 @@
-/* ========== Form Styles ========== */
-
-.form-main {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.search-text-field-pos {
-    width: 80%;
-    max-width: 1000px;
-    margin-bottom: 1rem;
+.search-btn-container {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .results-container {
     position: absolute;
-    top: 50%;
+    width: 100%;
+    top: calc(80px + 1rem);
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 700px;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .result-container ul {
@@ -49,6 +41,7 @@
 
 .results-word {
     color: var(--color-accent);
+    text-align: center;
 }
 
 .results-speech {
@@ -63,6 +56,3 @@
     color: var(--color-accent)
 }
 
-.loading-btn {
-    margin-left: 5rem;
-}

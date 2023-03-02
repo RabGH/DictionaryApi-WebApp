@@ -1,31 +1,13 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import '../static/css/styles.css';
+import { TextFieldDesign } from './sx_routes';
 
 
 function SearchTextField(props) {
   return (
     <TextField
-        sx={{
-            width: '1200px',
-            '& label.Mui-focused': {
-              color: '#fc5185',
-            },
-            '& .MuiInput-underline:after': {
-              borderBottomColor: '#fc5185', 
-            },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#fc5185',
-              },
-            '&:hover fieldset': {
-              borderColor: '#fc5185',
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: '#fc5185',
-            },
-          },
-        }}
+        sx={TextFieldDesign}
         className='search-text-field-pos'
         type='text'
         value={props.word}

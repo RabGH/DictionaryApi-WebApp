@@ -42,8 +42,12 @@ function DictionaryApi() {
   return (
     <div>
       <form className="form-main" onSubmit={(e) => e.preventDefault()}>
-        <SearchTextField className="search-text-field-pos" word={word} handleWordChange={handleWordChange} />
-        <SearchButton className="loading-btn" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+        <div className='search-field-container'>
+          <SearchTextField className="search-text-field-pos" word={word} handleWordChange={handleWordChange} />
+        </div>
+        <div className='search-btn-container'>
+          <SearchButton className="loading-btn" handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+        </div>
       </form>
       {!isLoading && wordData && (
         <div className="results-container fade-in">
