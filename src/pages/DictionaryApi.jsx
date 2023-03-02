@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/SearchButton'
 import SearchTextField from '../components/SearchTextField';
-import '../static/css/dictionaryapi.css';
-import '../static/css/home.css';
+
 
 
 function DictionaryApi() {

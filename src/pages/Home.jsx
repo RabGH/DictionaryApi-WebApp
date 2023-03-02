@@ -1,7 +1,4 @@
 import React from 'react';
-import '../static/css/styles.css';
-import '../static/css/home.css';
-import '../static/css/dictionaryapi.css';
 import DictionaryApi from './DictionaryApi.jsx';
 import MUIButton from '../components/MUIButton'
 import { Typography } from '@mui/material';

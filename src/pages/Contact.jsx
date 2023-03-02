@@ -1,5 +1,4 @@
 import React from 'react';
-import '../static/css/contact.css';
 import MUITextField from '../components/TextField';
 import MUIButton from '../components/MUIButton'
 

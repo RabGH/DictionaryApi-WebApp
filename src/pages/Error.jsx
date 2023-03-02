@@ -1,5 +1,4 @@
 import React from 'react';
-import '../static/css/error.css';
 import MUIButton from '../components/MUIButton'
 
 function Error() {

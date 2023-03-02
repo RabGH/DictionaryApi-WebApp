@@ -55,19 +55,6 @@ h1, h2, h3, h4 {
     color: var(--color-accent);
 }
 
-
-/* ========== Header Styles ========== */
-
-.toolbar {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    display: block;
-    margin: 0 auto;
-  }
-
 /* ========== Footer Styles ========== */
 
 .footer {

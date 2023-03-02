@@ -1,13 +1,12 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
-import '../static/css/styles.css';
-import { TextFieldDesign } from './sx_routes';
+import { SearchFieldDesign } from '../styles/home';
 
 
 function SearchTextField(props) {
   return (
     <TextField
-        sx={TextFieldDesign}
+        sx={SearchFieldDesign}
         className='search-text-field-pos'
         type='text'
         value={props.word}
