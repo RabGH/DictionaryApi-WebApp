@@ -70,20 +70,15 @@ function DictionaryApi() {
                         ({wordData.part_of_speech})
             </Typography>
             </Box>
-          <List sx={{ mt: 1, mb: 1, maxHeight: '550px' }}>
+          <List sx={{ mb: 1 }}>
             {wordData.definitions.map((definition, index) => (
-              <ListItem key={index} sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                    <Typography sx={{ fontWeight: 'bold', mr: 1, color: '#fc5185', }}>
+              <ListItem key={index} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+                    <Typography sx={{ fontWeight: 'bold', mr: 0.1, color: '#fc5185', }}>
                         {index + 1}. 
                     </Typography>
-                  <ListItemText
-                    primary={
-                      <Typography sx={{ color: '#00FFFF', ml: 1 }}>
+                      <Typography sx={{ ml: 1 }}>
                         {definition.charAt(0).toUpperCase() + definition.slice(1)}
                       </Typography>
-                    }
-                    sx={{ display: 'flex', alignItems: 'flex-start' }}
-                  />
               </ListItem>
             ))}
           </List>
@@ -100,7 +95,7 @@ function DictionaryApi() {
               <Typography sx={{ display: 'inline-flex' }}>
               {wordData.synonyms.map((synonym, index) => (
                 <React.Fragment key={synonym}>
-                  <Typography sx={{ color: '#FF7F50' }}>
+                  <Typography sx={{ color: 'pink' }}>
                     {index !== 0 && ", "}
                     {synonym
                       .split(' ')
