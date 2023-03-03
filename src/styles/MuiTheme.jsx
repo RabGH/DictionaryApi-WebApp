@@ -19,12 +19,30 @@ const theme = createTheme({
         },
     },
     typography: {
-        h4: {
+        h1: {
             color: "#fc5185",
         },
+        h2: {
+            color: "#fc5185"
+        },
+
+        h3: {
+            color: "#fc5185"
+        },
+        h4: {
+            color: "#fc5185"
+        },
+        h5: {
+            color: "#fc5185"
+        },
+        h6: {
+            color: "#fc5185"
+        },
+
         body1: {
             color: "#FFFFFF",
         },
+        
         body2: {
             color: "#000000",
         },

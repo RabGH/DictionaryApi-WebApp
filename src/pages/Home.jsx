@@ -7,12 +7,12 @@ import { Container, Typography, Box } from '@mui/material';
 function Home() {
   return (
   <>
-    <Container  sx={{ height: '100vh' }} maxWidth="md">
+    <Container  sx={{ height: '80vh' }} maxWidth="md">
       <Box sx={{ display: 'flex', 
                  flexDirection: 'column',
                  justifyContent: 'center',
                  alignItems: 'center',
-                 marginTop: 3, 
+                 marginTop: 4.5, 
               }}>
           <Typography variant='h4' component='div' sx={{ mb:2 }}>
             Welcome to Dictionary

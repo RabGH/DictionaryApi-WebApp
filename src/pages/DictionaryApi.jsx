@@ -64,24 +64,32 @@ function DictionaryApi() {
       </Box>
       {!isLoading && wordData && (
         <Fade in={true}>
-          <Box sx={{ mt:2 }}>
-            <Typography variant='h5' sx={{ mb:1 }}>
-            <span>{wordData.word}</span>
-            <span sx={{ ml: 1,
+          <Box sx={{ mt:2,
+                     display: 'flex',
+                     flexDirection: 'column',
+                     alignItems: 'center',
+                     justifyContent: 'center',
+                     ml: 6, 
+                     }}>
+            <Typography sx={{ mb:1 }}>
+            <Typography variant='h4'>{wordData.word}</Typography>
+            <Typography variant='h6' sx={{ ml: -1.5,
                         fontStyle: 'italic', 
                         }}>
                         ({wordData.part_of_speech})
-            </span>
+            </Typography>
         </Typography>
         <ol>
           {wordData.definitions.map((definition, index) => (
             <li key={index}>
               <Typography variant='body1' sx={{ display: 'flex',
                                                 alignItems: 'center',
+                                                justifyContent: 'center',
                                                 mb: 1, 
                                                 }}>
                 <span sx={{ fontWeight: 'bold',
-                            mr: 1, 
+                            mr: 1,
+                            color: '#fc5185', 
                             }}>
                             {index + 1}. 
                             </span>
