@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import MUIButton from '../components/MUIButton';
-// import { footerStyles, fAppBarStyles, typographyCopyRight, typographyL } from '../styles/home';
 
 function Footer() {
     const location = useLocation();

@@ -1,12 +1,14 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
+import { Container } from '@mui/material';
+
 
 
 function MUITextField(props) {
     const { multiline } = props;
 
     return (
-        <div>
+        <Container>
             <TextField
                 id={props.id}
                 label={props.label}
@@ -18,7 +20,7 @@ function MUITextField(props) {
                 rows={props.rows}
                 style={multiline ? { width: '100%', margin:'0 auto' } : { width: '100%' }}
             />
-        </div>
+        </Container>
     )
 }
 

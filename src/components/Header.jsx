@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import logo from '../static/images/logo.png';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import MUIButton from './MUIButton';
-// import { headerStyles, typographyHeader } from '../styles/home';
 
 function Header() {
   const location = useLocation();

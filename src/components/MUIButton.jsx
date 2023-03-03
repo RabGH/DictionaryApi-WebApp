@@ -1,11 +1,10 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-function MUIButton({ type, onClick, children, className }) {
+function MUIButton({ type, onClick, children }) {
   if (type === 'submit') {
     return (
       <Button
-        className={className}
         variant="contained"
         color="secondary"
         type={type}
@@ -17,7 +16,6 @@ function MUIButton({ type, onClick, children, className }) {
   } else if (type === 'reset') {
     return (
       <Button
-        className={className}
         variant="contained"
         color="secondary"
         type={type}
@@ -28,7 +26,6 @@ function MUIButton({ type, onClick, children, className }) {
     } else {
       return (
       <Button
-        className={className}
         variant="contained"
         color="secondary"
         onClick={onClick}

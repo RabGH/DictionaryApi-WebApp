@@ -1,7 +1,30 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import RobotoLight from '../static/fonts/Roboto-Light.ttf';
+import RobotoMedium from '../static/fonts/Roboto-Medium.ttf';
 
 const theme = createTheme({
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: {
+                body: {
+                    backgroundColor: "#333333",
+                    fontFamily: 'Roboto, sans-serif',
+                },
+                "*": {
+                    boxSizing: 'border-box',
+                    margin: 0,
+                    padding: 0,
+                },
+                a: {
+                    textDecoration: "none",
+                },
+                ul: {
+                    listStyles: 'none',
+                },
+            },
+        },
+    },
     palette: {
         primary: {
             main: '#FFFFFF',
@@ -19,6 +42,13 @@ const theme = createTheme({
         },
     },
     typography: {
+
+        fontFamily: 'Roboto, sans-serif',
+        fontWeightLight: 300,
+        fontWeightMedium: 500,
+        fontWeightRegular: 400,
+        fontWeightBold: 700,
+
         h1: {
             color: "#fc5185",
         },

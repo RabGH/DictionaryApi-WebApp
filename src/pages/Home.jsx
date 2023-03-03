@@ -1,12 +1,10 @@
 import React from 'react';
 import DictionaryApi from './DictionaryApi.jsx';
 import { Container, Typography, Box } from '@mui/material';
-// import { boxHome1, boxHome2, typographyHome1, homeContainer } from '../styles/home';
 
 
 function Home() {
   return (
-  <>
     <Container  sx={{ height: '100vh' }} maxWidth="md">
       <Box sx={{ display: 'flex', 
                  flexDirection: 'column',
@@ -27,7 +25,6 @@ function Home() {
           </Box>
       </Box>
     </Container>
-  </>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
 import MUITextField from "../components/TextField";
 import MUIButton from "../components/MUIButton";
-import { Box, Container, Typography, TextField, Button } from "@mui/material";
-
+import { Box, Container, Typography } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
 
 function Contact() {
   const sxStyleBox = { width: "900px", mb: 2 }
@@ -35,7 +36,6 @@ function Contact() {
   };
 
   return (
-    <>
       <Container maxWidth="sm" sx={{ display: "flex", flexDirection: "column", alignItems: "center", mt: 5, height: "80vh" }}>
         <Box>
           <Typography variant="h4" sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
@@ -64,12 +64,12 @@ function Contact() {
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box sx={{ mr: 2 }}>
-                <MUIButton type="submit">
+                <MUIButton type="submit" endIcon={<SendIcon />}>
                   Send
                 </MUIButton>
               </Box>
               <Box sx={{ ml: 2 }}>
-                <MUIButton  type="reset">
+                <MUIButton  type="reset" startIcon={<DeleteIcon />}>
                   Clear
                 </MUIButton>
               </Box>
@@ -77,7 +77,6 @@ function Contact() {
           </form>
         </Box>
       </Container>
-    </>
   );
 }
 
