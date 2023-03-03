@@ -1,0 +1,3 @@
+[submodule "OrigServer"]
+	path = OrigServer
+	url = https://github.com/RabGH/server_DictionaryAPI.git
