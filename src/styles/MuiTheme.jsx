@@ -1,7 +1,5 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import RobotoLight from '../static/fonts/Roboto-Light.ttf';
-import RobotoMedium from '../static/fonts/Roboto-Medium.ttf';
 
 const theme = createTheme({
     components: {

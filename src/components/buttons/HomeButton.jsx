@@ -9,7 +9,7 @@ class HomeButton extends React.Component {
     }
 
     render() {
-        const { label, sx } = this.props;
+        const { sx } = this.props;
 
         return (
             <Button
@@ -18,7 +18,6 @@ class HomeButton extends React.Component {
             type='button'
             onClick={this.props.onClick}
             startIcon={<DoorBackTwoToneIcon />}
-            label={label}
             sx={sx}
             >
                 {this.props.label}

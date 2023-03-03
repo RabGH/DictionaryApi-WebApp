@@ -26,13 +26,13 @@ function Header() {
             </Box>
             {location.pathname === '/' ? (
               <Box>
-                <ContactButton onClick={() => (window.location.href = '/contact')} sx={{ backgroundColor: 'pink'}} label="Contact">
+                <ContactButton onClick={() => (window.location.href = '/contact')} sx={{ backgroundColor: 'pink', '&:hover':{backgroundColor:'#fc5185'}, }} label="Contact">
                   Contact
                 </ContactButton>
               </Box>
             ) : (
               <Box>
-                <HomeButton onClick={() => (window.location.href = '/')} label="Home" sx={{ backgroundColor: 'pink' }}>
+                <HomeButton onClick={() => (window.location.href = '/')} sx={{ backgroundColor: 'pink', '&:hover':{backgroundColor:'#fc5185'}, }} label="Home">
                   Home
                 </HomeButton>
               </Box>
