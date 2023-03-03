@@ -87,21 +87,29 @@ function DictionaryApi() {
                                                 justifyContent: 'center',
                                                 mb: 1, 
                                                 }}>
-                <span sx={{ fontWeight: 'bold',
-                            mr: 1,
-                            color: '#fc5185', 
-                            }}>
-                            {index + 1}. 
-                            </span>
-                <span>{definition.charAt(0).toUpperCase() + definition.slice(1)}</span>
+                <Typography sx={{ fontWeight: 'bold',
+                                mr: 1,
+                                color: '#fc5185', 
+                                }}>
+                    {index + 1}. 
+                </Typography>
+
+                <Typography>
+                  {definition.charAt(0).toUpperCase() + definition.slice(1)}
+                </Typography>
+
               </Typography>
             </li>
           ))}
         </ol>
         {wordData.synonyms && (
-          <Typography variant='body1' sx={{ fontStyle: 'italic' }}>
-            <span sx={{ fontWeight: 'bold' }}>Synonyms: </span> 
-            {wordData.synonyms.join(', ')}
+          <Typography variant='body1' sx={{ fontStyle: 'italic', display: 'flex', padding: '1rem' }}>
+            <Typography sx={{ fontWeight: 'bold', color:"#fc5185", mr: 1 }}>
+            Synonyms: 
+            </Typography>
+            <Typography sx={{ color: 'red' }}>
+            {wordData.synonyms.join(', ').toUpperCase()}
+            </Typography> 
           </Typography>
           )}
           </Box>

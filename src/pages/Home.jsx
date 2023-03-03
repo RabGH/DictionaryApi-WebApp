@@ -7,7 +7,7 @@ import { Container, Typography, Box } from '@mui/material';
 function Home() {
   return (
   <>
-    <Container  sx={{ height: '80vh' }} maxWidth="md">
+    <Container  sx={{ height: '85vh' }} maxWidth="md">
       <Box sx={{ display: 'flex', 
                  flexDirection: 'column',
                  justifyContent: 'center',
