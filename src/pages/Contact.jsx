@@ -51,16 +51,16 @@ function Contact() {
         <Box sx={{ mt: 5 }}>
           <form id="ContactForm" onSubmit={handleSubmit}>
             <Box sx={ sxStyleBox }>
-              <MUITextField id="name" label="Name" name="name" type="text" variant="outlined" required />
+              <MUITextField id="name" label="Name" name="name" type="text" required />
             </Box>
             <Box sx={ sxStyleBox }>
-              <MUITextField id="email" label="Email" name="email" type="email" variant="outlined" required />
+              <MUITextField id="email" label="Email" name="email" type="email" required />
             </Box>
             <Box sx={ sxStyleBox }>
-              <MUITextField id="subject" label="Subject" name="subject" type="text" variant="outlined" required />
+              <MUITextField id="subject" label="Subject" name="subject" type="text" required />
             </Box>
             <Box sx={ sxStyleBox }>
-              <MUITextField id="message" label="Message" name="message" multiline rows={5} variant="outlined" required />
+              <MUITextField id="message" label="Message" name="message" multiline rows={5} required />
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box sx={{ mr: 2 }}>
