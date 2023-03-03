@@ -1,13 +1,41 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/buttons/SearchButton'
+import RandomButton from '../components/buttons/RandomButton';
 import SearchTextField from '../components/textfields/SearchTextField';
 import { Box, Container, Typography, Fade, List, ListItem } from '@mui/material';
 
+
+
 function DictionaryApi() {
+  const [isRandomizing, setIsRandomizing] = useState(false);
   const [word, setWord] = useState('');
   const [wordData, setWordData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
+
+  const handleRandomizeClick = () => {
+    setIsRandomizing(true);
+    fetch('http://localhost:5000/api/random', {
+      credentials: 'include'
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText)
+      }
+      return response.json();
+    })
+    .then(data => {
+      setWord(data.word);
+      setWordData(data);
+      setIsLoading(false);
+      setIsRandomizing(false);
+    })
+    .catch(error => {
+      console.log(error);
+      setIsLoading(false);
+      setIsRandomizing(false);
+    });
+  };
 
   const handleWordChange = (e) => {
     setWord(e.target.value);
@@ -44,8 +72,33 @@ function DictionaryApi() {
           <Box sx={{ flexGrow: 1 }}>
               <form onSubmit={(e) => e.preventDefault()}>
                   <SearchTextField word={word} handleWordChange={handleWordChange} />
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, }}>
-                  <SearchButton handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} />
+                <Box
+                 sx={{ 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  mt: 2, 
+                   }}>
+                  <Box>
+                    <SearchButton 
+                    handleClick={() => fetchData(word)} isLoading={isLoading} isButtonLoading={isButtonLoading} 
+                    sx={{
+                       marginRight: '1rem',
+                       height: '3rem',
+                       width: '8rem',}} label="Search">
+                      Search
+                    </SearchButton>
+                  </Box>
+                  <Box>
+                    <RandomButton
+                     onClick={handleRandomizeClick} isLoading={isLoading} isRandomizing={isRandomizing}
+                     sx={{ 
+                       color:"#FC5185", 
+                       marginLeft: '1rem', 
+                       height: '3rem',
+                       width: '8rem', }} label="Randomize">
+                      Randomize
+                    </RandomButton>
+                  </Box>
                 </Box>
               </form>
           </Box>

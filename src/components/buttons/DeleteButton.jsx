@@ -9,6 +9,8 @@ class DeleteButton extends React.Component {
     }
 
     render() {
+        const { sx } = this.props;
+
         return (
             <Button
                 variant='outlined'
@@ -16,6 +18,7 @@ class DeleteButton extends React.Component {
                 type='reset'
                 onClick={this.props.onClick}
                 startIcon={<DeleteIcon />}
+                sx={sx}
             >
                 {this.props.label}
             </Button>

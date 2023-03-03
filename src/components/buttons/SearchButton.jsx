@@ -1,29 +1,37 @@
 import React from 'react';
 import LoadingButton from '@mui/lab/LoadingButton';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone'
 import CircularProgress from '@mui/material/CircularProgress';
-// import { SearchBtn } from '../styles/home';
 
 
+class SearchButton extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props) {
+        super(props);
+    }
 
-function SearchButton ({ isLoading, handleClick }) {
-    return (
-        <LoadingButton
-            id='search-btn'
-            type='submit'
-            className='loading-btn'
-            sx={{marginLeft: '1rem',
-                 height: '3rem',
-                 width: '6rem',}}
-            loading={isLoading}
-            loadingIndicator={<CircularProgress className="circular-progress-bar" />}
-            onClick={handleClick}
-            disabled={isLoading}
-            color='secondary'
-            variant='contained'
-        >
-            {isLoading ? 'Loading...' : 'Search'}
-        </LoadingButton>
-    );
+
+    render() { 
+        const { isLoading, handleClick, sx } = this.props;
+
+
+        return ( 
+            <LoadingButton
+                type='submit'
+                sx={sx}
+                loading={isLoading}
+                loadingIndicator={<CircularProgress className="circular-progress-bar" />}
+                onClick={handleClick}
+                startIcon={<SearchTwoToneIcon />}
+                disabled={isLoading}
+                color='secondary'
+                variant='contained'
+                label="Search"
+            >
+                {isLoading ? 'Loading...' : 'Search'}
+            </LoadingButton>
+        );
+    }
 }
 
 export default SearchButton;
