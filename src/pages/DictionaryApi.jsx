@@ -70,39 +70,33 @@ function DictionaryApi() {
                         ({wordData.part_of_speech})
             </Typography>
             </Box>
-          <List>
+          <List sx={{ mt: 1, mb: 1, maxHeight: '550px' }}>
             {wordData.definitions.map((definition, index) => (
-              <ListItem key={index}>
-                <Box sx={{ display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          mb: 1, 
-                          }}>
-                  <Typography sx={{ fontWeight: 'bold',
-                                  mr: 1,
-                                  color: '#fc5185', 
-                                  }}>
-                      {index + 1}. 
-                  </Typography>
-
-                  <Typography sx={{ color: '#00FFFF' }}>
-                    {definition.charAt(0).toUpperCase() + definition.slice(1)}
-                  </Typography>
-
-                </Box>
+              <ListItem key={index} sx={{ display: 'flex', alignItems: 'flex-start' }}>
+                    <Typography sx={{ fontWeight: 'bold', mr: 1, color: '#fc5185', }}>
+                        {index + 1}. 
+                    </Typography>
+                  <ListItemText
+                    primary={
+                      <Typography sx={{ color: '#00FFFF', ml: 1 }}>
+                        {definition.charAt(0).toUpperCase() + definition.slice(1)}
+                      </Typography>
+                    }
+                    sx={{ display: 'flex', alignItems: 'flex-start' }}
+                  />
               </ListItem>
             ))}
           </List>
           {wordData.synonyms && (
-            <Typography variant='body1' sx={{ fontStyle: 'italic',
-                                              display: 'flex',
-                                              padding: '1rem', 
-                                            }}>
-              <Typography sx={{ fontWeight: 'bold', 
-                                color:"#fc5185", mr: 1 
-                              }}>
-              Synonyms: 
-              </Typography>
+            <Typography variant='body1' sx={{ 
+                                         fontStyle: 'italic',                            
+                                         display: 'flex',
+                                         padding: '1rem', 
+                                        }}>
+              <Typography sx={{ 
+                            fontWeight: 'bold', 
+                            color:"#fc5185", mr: 1 
+                          }}> Synonyms: </Typography>
               <Typography sx={{ display: 'inline-flex' }}>
               {wordData.synonyms.map((synonym, index) => (
                 <React.Fragment key={synonym}>
