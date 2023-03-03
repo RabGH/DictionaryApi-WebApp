@@ -1,5 +1,5 @@
 import React from "react";
-import MUIButton from "../components/MUIButton";
+import MUIButton from "../components/buttons/MUIButton";
 import { Container, Box, Typography } from "@mui/material";
 
 function Error() {

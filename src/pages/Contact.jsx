@@ -1,12 +1,32 @@
 import React from "react";
-import MUITextField from "../components/TextField";
-import MUIButton from "../components/MUIButton";
+import MUITextField from "../components/textfields/TextField";
+import MUIButton from "../components/buttons/MUIButton";
 import { Box, Container, Typography } from "@mui/material";
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
+import SubmitButton from "../components/buttons/SubmitButton"
+import DeleteIcon from "../components/buttons/DeleteButton"
+import DeleteButton from '../components/buttons/DeleteButton';
+
 
 function Contact() {
-  const sxStyleBox = { width: "900px", mb: 2 }
+  const sxStyleBox = { width: "900px", mb: 2.,
+
+        '& label.Mui-focused': {
+          color: '#fc5185',
+        },
+        '& .MuiInput-underline:after': {
+          borderBottomColor: '#fc5185', 
+        },
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: '#fc5185',
+          },
+        '&:hover fieldset': {
+          borderColor: '#fc5185',
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: '#fc5185',
+        }, }
+      }
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = document.querySelector("form#ContactForm");
@@ -64,14 +84,14 @@ function Contact() {
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Box sx={{ mr: 2 }}>
-                <MUIButton type="submit" endIcon={<SendIcon />}>
+                <SubmitButton label="Send">
                   Send
-                </MUIButton>
+                </SubmitButton>
               </Box>
               <Box sx={{ ml: 2 }}>
-                <MUIButton  type="reset" startIcon={<DeleteIcon />}>
+                <DeleteButton  label="Clear">
                   Clear
-                </MUIButton>
+                </DeleteButton>
               </Box>
             </Box>
           </form>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography } from '@mui/material';
-import MUIButton from '../components/MUIButton';
+import MUIButton from './buttons/MUIButton';
+import HomeButton from './buttons/HomeButton';
+import ContactButton from './buttons/ContactButton';
 
 function Footer() {
     const location = useLocation();
@@ -23,13 +25,13 @@ function Footer() {
                     Made with love by Rabii Ghaith
                 </Typography>
                 {location.pathname === '/contact' ? (
-                <MUIButton onClick={() => (window.location.href = '/')}>
+                <HomeButton onClick={() => (window.location.href = '/')} sx={{ backgroundColor: 'pink' }} label="">
                     Home
-                </MUIButton>
+                </HomeButton>
                 ) : (
-                <MUIButton onClick={() => (window.location.href = '/contact')}>
+                <ContactButton onClick={() => (window.location.href = '/contact')} sx={{ backgroundColor: 'pink' }} label="">
                     Contact
-                </MUIButton>
+                </ContactButton>
                 )}
             </Toolbar>
         </AppBar>

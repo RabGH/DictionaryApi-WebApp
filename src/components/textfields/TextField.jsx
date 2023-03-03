@@ -14,7 +14,7 @@ function MUITextField(props) {
                 label={props.label}
                 name={props.name}
                 type={props.type}
-                variant="filled"
+                variant="outlined"
                 required={props.required}
                 multiline={multiline}
                 rows={props.rows}

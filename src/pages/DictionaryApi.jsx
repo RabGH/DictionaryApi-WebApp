@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SearchButton from '../components/SearchButton'
-import SearchTextField from '../components/SearchTextField';
-import { Box, Container, Typography, Fade, List, ListItem, ListItemText }from '@mui/material';
+import SearchButton from '../components/buttons/SearchButton'
+import SearchTextField from '../components/textfields/SearchTextField';
+import { Box, Container, Typography, Fade, List, ListItem } from '@mui/material';
 
 function DictionaryApi() {
   const [word, setWord] = useState('');
