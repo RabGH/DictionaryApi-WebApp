@@ -34,7 +34,6 @@ function SearchTextField(props) {
         label='Enter a word'
         variant='outlined'
         color='secondary'
-        required
     />
   );
 }

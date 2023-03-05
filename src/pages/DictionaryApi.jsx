@@ -15,27 +15,23 @@ function DictionaryApi() {
 
   const handleRandomizeClick = () => {
     setIsRandomizing(true);
-    fetch('http://localhost:5000/api/random', {
-      credentials: 'include'
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(response.statusText)
-      }
-      return response.json();
-    })
-    .then(data => {
-      setWord(data.word);
-      setWordData(data);
-      setIsLoading(false);
-      setIsRandomizing(false);
-    })
-    .catch(error => {
-      console.log(error);
-      setIsLoading(false);
-      setIsRandomizing(false);
-    });
-  };
+
+    fetch("https://random-word-api.herokuapp.com/word")
+      .then(response => response.json())
+      .then(data => {
+        const randomWord = data[0];
+        return fetch(`http://localhost:5000/api/info?word=${randomWord}`);
+      })
+      .then(response => response.json())
+      .then(data => {
+        const wordInfo = data[0];
+        setWord(wordInfo.word);
+        setWordData(data);
+      })
+      .catch(error => console.log(error));
+  }
+  
+  
 
   const handleWordChange = (e) => {
     setWord(e.target.value);
