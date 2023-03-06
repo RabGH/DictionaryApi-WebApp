@@ -16,10 +16,10 @@ function DictionaryApi() {
   const handleRandomizeClick = () => {
     setIsRandomizing(true);
 
-    fetch("https://random-word-api.herokuapp.com/word")
+    fetch("https://localhost:5000/api/random")
       .then(response => response.json())
       .then(data => {
-        const randomWord = data[0];
+        const randomWord = data.word;
         return fetch(`http://localhost:5000/api/info?word=${randomWord}`);
       })
       .then(response => response.json())
