@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/buttons/SearchButton'
-import RandomButton from '../components/buttons/RandomButton';
+// import RandomButton from '../components/buttons/RandomButton';
 import SearchTextField from '../components/textfields/SearchTextField';
 import { Box, Container, Typography, Fade, List, ListItem } from '@mui/material';
 
 
 
 function DictionaryApi() {
-  const [isRandomizing, setIsRandomizing] = useState(false);
+  // const [isRandomizing, setIsRandomizing] = useState(false);
   const [word, setWord] = useState('');
   const [wordData, setWordData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
 
-  const handleRandomizeClick = () => {
-    setIsRandomizing(true);
+  // const handleRandomizeClick = () => {
+  //   setIsRandomizing(true);
 
-    fetch("https://localhost:5000/api/random")
-      .then(response => response.json())
-      .then(data => {
-        const randomWord = data.word;
-        return fetch(`http://localhost:5000/api/info?word=${randomWord}`);
-      })
-      .then(response => response.json())
-      .then(data => {
-        const wordInfo = data[0];
-        setWord(wordInfo.word);
-        setWordData(data);
-      })
-      .catch(error => console.log(error));
-  }
+  //   fetch("https://localhost:5000/api/random")
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       const randomWord = data.word;
+  //       return fetch(`http://localhost:5000/api/info?word=${randomWord}`);
+  //     })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       const wordInfo = data[0];
+  //       setWord(wordInfo.word);
+  //       setWordData(data);
+  //     })
+  //     .catch(error => console.log(error));
+  // }
   
   
 
@@ -84,7 +84,7 @@ function DictionaryApi() {
                       Search
                     </SearchButton>
                   </Box>
-                  <Box>
+                  {/* <Box>
                     <RandomButton
                      onClick={handleRandomizeClick} isLoading={isLoading} isRandomizing={isRandomizing}
                      sx={{ 
@@ -94,7 +94,7 @@ function DictionaryApi() {
                        width: '8rem', }} label="Randomize">
                       Randomize
                     </RandomButton>
-                  </Box>
+                  </Box> */}
                 </Box>
               </form>
           </Box>
