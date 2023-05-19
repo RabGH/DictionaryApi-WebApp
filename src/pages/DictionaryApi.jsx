@@ -1,37 +1,15 @@
 import React, { useState } from 'react';
 import SearchButton from '../components/buttons/SearchButton'
-// import RandomButton from '../components/buttons/RandomButton';
 import SearchTextField from '../components/textfields/SearchTextField';
 import { Box, Container, Typography, Fade, List, ListItem } from '@mui/material';
 
 
 
 function DictionaryApi() {
-  // const [isRandomizing, setIsRandomizing] = useState(false);
   const [word, setWord] = useState('');
   const [wordData, setWordData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
-
-  // const handleRandomizeClick = () => {
-  //   setIsRandomizing(true);
-
-  //   fetch("https://localhost:5000/api/random")
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       const randomWord = data.word;
-  //       return fetch(`http://localhost:5000/api/info?word=${randomWord}`);
-  //     })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       const wordInfo = data[0];
-  //       setWord(wordInfo.word);
-  //       setWordData(data);
-  //     })
-  //     .catch(error => console.log(error));
-  // }
-  
-  
 
   const handleWordChange = (e) => {
     setWord(e.target.value);
@@ -40,7 +18,7 @@ function DictionaryApi() {
   const fetchData = (word) => {
     setIsLoading(true);
     setIsButtonLoading(true);
-    fetch(`http://localhost:5000/api/info?word=${word}`, {
+    fetch(`http://192.168.1.5:5000/api/info?word=${word}`, {
         credentials: 'include'
     })
       .then(response => {
@@ -84,17 +62,6 @@ function DictionaryApi() {
                       Search
                     </SearchButton>
                   </Box>
-                  {/* <Box>
-                    <RandomButton
-                     onClick={handleRandomizeClick} isLoading={isLoading} isRandomizing={isRandomizing}
-                     sx={{ 
-                       color:"#FC5185", 
-                       marginLeft: '1rem', 
-                       height: '3rem',
-                       width: '8rem', }} label="Randomize">
-                      Randomize
-                    </RandomButton>
-                  </Box> */}
                 </Box>
               </form>
           </Box>
