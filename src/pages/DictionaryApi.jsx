@@ -76,7 +76,10 @@ function DictionaryApi() {
                      ml: 4, 
                      }}>
             <Box sx={{ mb:1 }}>
-            <Typography variant='h4'>
+            <Typography variant='h4' sx={{ display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center'
+                                            }}>
               {wordData.word}
             </Typography>
             <Typography variant='body1' sx={{ color: '#FF7F50',
