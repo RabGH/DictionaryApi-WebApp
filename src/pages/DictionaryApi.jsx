@@ -23,7 +23,7 @@ function DictionaryApi() {
   const fetchData = (word) => {
     setIsLoading(true);
     setIsButtonLoading(true);
-    fetch(`http://192.168.1.5:5000/api/info?word=${word}`, {
+    fetch(`http://192.168.1.4:5000/api/info?word=${word}`, {
       credentials: "include",
     })
       .then((response) => {
